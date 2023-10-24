@@ -2,8 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:zoom_clone/screens/home_screen.dart';
 import 'package:zoom_clone/screens/login_screen.dart';
 import 'package:zoom_clone/utility/colors.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+      apiKey: "YOUR_API_KEY",
+      appId: "YOUR_APP_ID",
+      projectId: "YOUR_PROJECT_ID",
+      messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+      measurementId: "YOUR_MEASUREMENT_ID", // Optional
+    ),
+  );
   runApp(const MyApp());
 }
 
