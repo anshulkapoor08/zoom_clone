@@ -42,10 +42,9 @@ class MyApp extends StatelessWidget {
             child: CircularProgressIndicator(),
           );
         }
-        if( snapshot.hasData){
-          return const HomeScreen();
-        }
-        return LoginScreen();
+        if(snapshot.hasData){
+          return const HomeScreen();}
+        return  const LoginScreen();
       },
       )
     );
