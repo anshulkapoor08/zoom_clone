@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
            padding: const EdgeInsets.symmetric(vertical: 18.0),
            child: Image.asset('assets/images/onboarding.jpg'),
          ),
-          CustomButton(text: 'Login', onPressed: () async{
+          CustomButton(text: 'Google sign in', onPressed: () async{
             bool res = await auth.signInWithGoogle(context);
             if(res){
               Navigator.push(context, '/home' as Route<Object?>);
